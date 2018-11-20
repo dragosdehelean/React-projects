@@ -2,8 +2,10 @@ const Header = (props) => {
   return (
     <header>
       <h1>{ props.title }</h1>
-      <span className="stats">Players: { props.totalPlayers }</span>
+      <span className="stats">Players: { props.totalPlayers }</span> 
+      <h2 onClick={() => props.addPlayer("dragos")}>Add Player</h2>     
     </header>
+    
   );
 }
 
@@ -78,12 +80,21 @@ class App extends React.Component {
     });
   }
 
+  handleAddPlayer = (name) => {
+    this.setState( prevState => {
+      return {
+        players: [...prevState.players, {name: "Dragos", id: 5}]
+      };
+    });
+  }
+
   render() {
     return (
       <div className="scoreboard">
         <Header 
           title="Scoreboard" 
           totalPlayers={this.state.players.length} 
+          addPlayer={this.handleAddPlayer}  
         />
   
         {/* Players list */}
