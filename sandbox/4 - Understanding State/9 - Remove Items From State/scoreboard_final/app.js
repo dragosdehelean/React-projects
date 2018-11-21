@@ -81,11 +81,9 @@ class App extends React.Component {
   }
 
   handleAddPlayer = (name) => {
-    this.setState( prevState => {
-      return {
-        players: [...prevState.players, {name: "Dragos", id: 5}]
-      };
-    });
+    this.setState( prevState => (
+     { players: [...prevState.players, {name: "Dragos", id: 5}] }
+    ));
   }
 
   render() {
