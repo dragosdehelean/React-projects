@@ -86,6 +86,12 @@ class App extends React.Component {
     ));
   }
 
+  removeHandler = (id) => {
+    this.setState(prevState=>(
+      {players: prevState.players.filter(item => item.id !== id)}
+    ))
+  }
+
   render() {
     return (
       <div className="scoreboard">
