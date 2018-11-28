@@ -3,10 +3,11 @@ import Header from "./components/HeaderComponent";
 import { DISHES } from './shared/dishes';
 import Menu from "./components/MenuComponent";
 
-
 class App extends Component {
+
   state = { dishes: DISHES };
 
+  
   
   render() {   
     return (
