@@ -1,26 +1,59 @@
 import React, { Component } from "react";
-import Header from "./components/HeaderComponent";
-import { DISHES } from './shared/dishes';
-import Menu from "./components/MenuComponent";
+import Header from "./components/Header";
+import { PLAYERS } from './shared/players';
+import Player from "./components/Player";
+import NameForm from "./components/NameForm";
+
 
 class App extends Component {
 
-  state = { dishes: DISHES };
+  state = { players: PLAYERS };  
 
-  
-  
-  render() {   
+  handleRemovePlayer = (id) => {
+    this.setState( prevState => {
+      return {
+        players: prevState.players.filter( p => p.id !== id )
+      };
+    });
+  }
+
+  handleAddPlayer = (name) => {
+    const newPlayer = {name: name, id: 5};
+    this.setState( prevState => (      
+      { players: [...prevState.players, newPlayer] }
+    ));
+  }
+
+  removeHandler = (id) => {
+    this.setState(prevState=>(
+      {players: prevState.players.filter(item => item.id !== id)}
+    ))
+  }
+
+  render() {
     return (
-      <div>
-        {/* <Header /> */}
+      <div className="scoreboard">
+        <Header 
+          title="Scoreboard" 
+          totalPlayers={this.state.players.length} 
+           
+        />
+  
+        {/* Players list */}
+        {this.state.players.map( player =>
+          <Player 
+            name={player.name}
+            id={player.id}
+            key={player.id.toString()} 
+            removePlayer={this.handleRemovePlayer}           
+          />
+        )}
 
-        <Header dishesnumber = {this.state.dishes.length} />
-
-        <Menu dishes={this.state.dishes} />
-
+        <NameForm addPlayer={this.handleAddPlayer} />
       </div>
     );
   }
 }
+  
 
 export default App;
