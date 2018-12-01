@@ -76,5 +76,13 @@ const planets = [
 // 2: Create a container component that iterates over the planets array 
 //    and renders a 'Planet' component for each object in the array 
 
+const App = () =>{
+
+  return (
+    <h1> Hello World!</h1>
+  )
+}
 
 // 3: Render the container component to the DOM
+
+ReactDOM.render(<App />, document.getElementById('root'))
