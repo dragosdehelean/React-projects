@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Sandbox for Stack Overflow question http://stackoverflow.com/q/10627306/578288" />
+<meta charset=utf-8 />
+  <title>Sandbox for SO question about scaling an element both visually and dimensionally</title>
+  <style>
+  
+  body {
+  font-size: 13px;
+  background-color: #fff;
+}
+#wrapper {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.07692307692307693em solid #888;
+  padding: 1.1538461538461537em;
+}
+.surrounding-content {
+  border: 0.07692307692307693em solid #eee;
+}
+#content-to-scale {
+  border: 0.07692307692307693em solid #bbb;
+  width: 10em;
+}
+#content-to-scale {
+  font-size: 1.1em;
+}
+#content-to-scale img {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  max-width: 100%;
+}
+  
+  </style>
+
+
+</head>
+<body>
+
+  <div id="wrapper">
+    <div class="surrounding-content">
+      before
+    </div>
+
+    <div id="content-to-scale">
+      <div>something inside</div>
+      <div><img src="http://placekitten.com/g/150/100"></div>
+      <div>another something</div>
+    </div>
+
+    <div class="surrounding-content">
+      after
+    </div>
+  </div>
+
+</body>
+</html>
