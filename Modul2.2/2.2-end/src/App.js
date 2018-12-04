@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import { PLAYERS } from "./shared/players";
 import Player from "./components/Player";
-import NameForm from "./components/NameForm";
 
 class App extends Component {
   state = { players: PLAYERS };
@@ -42,8 +41,6 @@ class App extends Component {
             removePlayer={this.handleRemovePlayer}
           />
         ))}
-
-        <NameForm addPlayer={this.handleAddPlayer} />
       </div>
     );
   }
