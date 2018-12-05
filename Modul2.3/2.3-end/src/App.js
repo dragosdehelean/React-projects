@@ -7,6 +7,25 @@ import NameForm from "./components/NameForm";
 class App extends Component {
   state = { players: PLAYERS };
 
+
+  handleChangeScore = (id, modifier) => {
+    // console.log("scorul este: " + score);
+    this.setState(prevState => (
+      {
+        players: prevState.players.map( (player) => {
+          // dc e alt player decat cel cautat, returnez player-ul original
+          if (player.id !== id){  
+            return player
+          } 
+          // dc e player-ul cautat, returnez player-ul cu proprietatea score modificata
+          else { 
+            return Object.assign(player, {score: player.score + modifier}) 
+          }
+        })
+      }
+    ))
+  }
+
   handleRemovePlayer = id => {
     this.setState(prevState => {
       return {
@@ -22,24 +41,28 @@ class App extends Component {
     }));
   };
 
-  removeHandler = id => {
-    this.setState(prevState => ({
-      players: prevState.players.filter(item => item.id !== id)
-    }));
-  };
 
   render() {
     return (
       <div className="scoreboard">
-        <Header title="Scoreboard" totalPlayers={this.state.players.length} />
+
+        <Header 
+          title="Scoreboard" 
+          totalPlayers= {this.state.players.length}
+          totalScore = {this.state.players.reduce( (acc, player) => acc += player.score, 0 )} 
+          />
 
         {/* Players list */}
+
         {this.state.players.map(player => (
+          
           <Player
-            name={player.name}
-            id={player.id}
-            key={player.id.toString()}
-            removePlayer={this.handleRemovePlayer}
+            name = {player.name}
+            id = {player.id}
+            key = {player.id.toString()}
+            removePlayer = {this.handleRemovePlayer}
+            changeScore = {this.handleChangeScore}
+            score = {player.score}
           />
         ))}
 

@@ -6,7 +6,7 @@ import Player from "./components/Player";
 class App extends Component {
   state = { players: PLAYERS };
 
-  handleRemovePlayer = id => {
+  handleRemovePlayer = (id) => {
     this.setState(prevState => {
       return {
         players: prevState.players.filter(p => p.id !== id)
