@@ -45,8 +45,7 @@ class App extends Component {
       players: [...prevState.players, { name, id: genUniqIncrId(), score: 0 }]
     }));
   };
-
-
+  
   render() {
     return (
       <div className="scoreboard">
