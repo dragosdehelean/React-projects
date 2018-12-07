@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class NameForm extends Component {
+class AddPlayerForm extends Component {
   state = { value: "" };
 
   handleChange = event => {
@@ -8,27 +8,22 @@ class NameForm extends Component {
   };
 
   handleSubmit = event => {
-    
     event.preventDefault();
-    this.props.addPlayer(this.state.value)
+    this.props.addPlayer(this.state.value);
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
+        <input 
+          type="text" 
+          placeholder="Add a new player" 
+          value={this.state.value} onChange={this.handleChange} 
           />
-        </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Add Player" />
       </form>
     );
   }
 }
 
-export default NameForm;
-
+export default AddPlayerForm;

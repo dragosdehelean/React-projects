@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import { PLAYERS } from "./shared/players";
 import Player from "./components/Player";
+import AddPlayerForm from "./components/AddPlayerForm";
 
 class App extends Component {
-  state = { players: PLAYERS };
-
+  state = { 
+    players: PLAYERS
+  };
 
   handleChangeScore = (id, modifier) => {
     // console.log("scorul este: " + score);
@@ -34,9 +36,13 @@ class App extends Component {
   };
 
   handleAddPlayer = name => {
-    const newPlayer = { name: name, id: 5 };
+    
+    // Genereaza un id nou, mai mare cu 1 fata de cel mai mare id din players,
+    // indiferent de cum evolueaza players  
+    const genUniqIncrId = () => 1 + Math.max(...this.state.players.map(player => player.id));    
+
     this.setState(prevState => ({
-      players: [...prevState.players, newPlayer]
+      players: [...prevState.players, { name, id: genUniqIncrId(), score: 0 }]
     }));
   };
 
@@ -45,11 +51,7 @@ class App extends Component {
     return (
       <div className="scoreboard">
 
-        <Header 
-          title="Scoreboard" 
-          totalPlayers= {this.state.players.length}
-          totalScore = {this.state.players.reduce( (acc, player) => acc += player.score, 0 )} 
-          />
+        <Header title="Scoreboard" players = {this.state.players} />
 
         {/* Players list */}
 
@@ -64,6 +66,8 @@ class App extends Component {
             score = {player.score}
           />
         ))}
+
+        <AddPlayerForm addPlayer={this.handleAddPlayer} />
       </div>
     );
   }
