@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import { PLAYERS } from "./shared/players";
 import Player from "./components/Player";
+import AddPlayerForm from "./components/AddPlayerForm";
 
 class App extends Component {
   state = { 
@@ -33,6 +34,17 @@ class App extends Component {
       };
     });
   };
+
+  handleAddPlayer = name => {
+    
+    // Genereaza un id nou, mai mare cu 1 fata de cel mai mare id din players,
+    // indiferent de cum evolueaza players  
+    const genUniqIncrId = () => 1 + Math.max(...this.state.players.map(player => player.id));    
+
+    this.setState(prevState => ({
+      players: [...prevState.players, { name, id: genUniqIncrId(), score: 0 }]
+    }));
+  };
   
   render() {
     return (
@@ -54,6 +66,7 @@ class App extends Component {
           />
         ))}
 
+        <AddPlayerForm addPlayer={this.handleAddPlayer} />
       </div>
     );
   }
