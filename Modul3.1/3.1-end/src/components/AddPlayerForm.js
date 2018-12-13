@@ -3,13 +3,17 @@ import React, { Component } from "react";
 class AddPlayerForm extends Component {
   state = { value: "" };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({ value: event.target.value });
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addPlayer(this.state.value);
+
+    if(this.state.value){
+      this.props.addPlayer(this.state.value);
+      this.setState({value: ""});
+    }    
   };
 
   render() {
