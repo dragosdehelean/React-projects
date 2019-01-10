@@ -8,7 +8,6 @@ class Stopwatch extends Component {
   };
 
   componentDidMount(){
-    console.log('s-a urcat!');
     this.clockId = setInterval(this.tick, 1000);
   }
 
@@ -17,8 +16,6 @@ class Stopwatch extends Component {
   }
 
   tick = ()=>{
-    console.log("cucu");
-
     if(this.state.isRunning){
       this.setState({
         totalTime: this.state.totalTime + 1 
