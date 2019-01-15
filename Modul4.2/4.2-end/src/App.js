@@ -65,10 +65,10 @@ class App extends Component {
     const maxScore = Math.max(...myPlayers.map(player => player.score));
 
     console.log("cel mai tare player este: ");
-    console.log(myPlayers.find(player => player.score == maxScore ));
+    console.log(myPlayers.find(player => player.score === maxScore ));
 
     return (
-      <div className="scoreboard">
+      <div className="scoreboard is-high-score" >
         <Header title="Scoreboard" players={this.state.players} />
 
         {/* Players list */}
