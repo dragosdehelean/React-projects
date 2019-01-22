@@ -5,8 +5,9 @@ class App extends Component {
 
   state = {
     guests: [
-      { name: "Alex", isConfirmed: false},
-      { name: "Bogdan", isConfirmed: false}
+      { name: "Alex", isConfirmed: true},
+      { name: "Bogdan", isConfirmed: false},
+      { name: "Ciprian", isConfirmed: false}
     ]
   }
 

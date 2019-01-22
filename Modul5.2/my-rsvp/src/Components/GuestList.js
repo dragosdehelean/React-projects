@@ -1,11 +1,11 @@
 import React from "react";
 
 const GuestList = props => {
-  const elements = props.guests.map((guest) => (
-    <li className="responded">
-      <span>Iver</span>
+  const elements = props.guests.map((item) => (
+    <li className={ item.isConfirmed ? "responded" : "" }>
+      <span>{item.name}</span>
       <label>
-        <input type="checkbox" checked /> Confirmed
+        <input type="checkbox" checked={item.isConfirmed}  /> Confirmed
       </label>
       <button>edit</button>
       <button>remove</button>

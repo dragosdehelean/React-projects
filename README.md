@@ -5,8 +5,8 @@ Trainer: @Dragos Dehelean
 **Studenti**:
 
 * [Alex]()
-* [Costin]()
-* [Andrei]()
+* [Costin](https://github.com/costin06/ReactApps)
+* [Andrei](https://github.com/andrein14/React.JS-Projects)
 * [Bogdan]()
 * [Ciprian]()
 * [Ida]()
