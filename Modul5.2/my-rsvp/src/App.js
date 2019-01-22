@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-import GuestList from './Components/GuestsList';
+import GuestList from './Components/GuestList';
 
 class App extends Component {
+
+  state = {
+    guests: [
+      { name: "Alex", isConfirmed: false},
+      { name: "Bogdan", isConfirmed: false}
+    ]
+  }
+
   render() {
     return (
       <div className="App">
@@ -36,7 +44,7 @@ class App extends Component {
             </tbody>
           </table>
           
-          <GuestList />
+          <GuestList guests={this.state.guests}/>
 
         </div>
       </div>
