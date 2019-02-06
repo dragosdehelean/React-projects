@@ -13,3 +13,6 @@ Trainer: @Dragos Dehelean
 * Alin
 * Alex-Gabi
 * Berkant
+
+**Proiecte finale**
+* [Planets (simple CDN app - 2 components)](https://dragosdehelean.github.io/React-projects/Modul2.1/aplicatie_4/final/)
