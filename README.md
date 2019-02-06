@@ -17,4 +17,4 @@ Trainer: @Dragos Dehelean
 **Proiecte finale**
 
 * [Planets (simple CDN app - 2 components)](https://dragosdehelean.github.io/React-projects/Modul2.1/aplicatie_4/final/)
-* [Scoreboard App] (https://dragosdehelean.github.io/React-Scoreboard-App/)
+* [Scoreboard App](https://dragosdehelean.github.io/React-Scoreboard-App/)
