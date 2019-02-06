@@ -10,9 +10,7 @@ const Player = (props) => {
         { props.name }
       </span>
 
-      <Counter 
-        cucu="bau"
-      />
+      <Counter />
     </div>
   );
 }
