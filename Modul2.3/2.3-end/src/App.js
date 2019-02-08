@@ -25,7 +25,7 @@ class App extends Component {
     ))
   }
 
-  handleRemovePlayer = id => {
+  handleRemovePlayer = (id) => {
     this.setState(prevState => {
       return {
         players: prevState.players.filter(p => p.id !== id)
