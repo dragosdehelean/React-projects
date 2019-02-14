@@ -109,7 +109,7 @@ export const JSCourses = [
   },
   {
     title: "Node.js Basics",
-    description: "In this course we will create a command line application to retrieve user's profile information from the Treehouse website. We'll be writing our application in JavaScript to run on the Node.js platform.",
+    description: "In this course we will create a command line application to retrieve user's profile information from the website. We'll be writing our application in JavaScript to run on the Node.js platform.",
     img_src: "https://achievement-images.teamtreehouse.com/badges_JavaScript_nodeBasics_Stage1.png",
     id: "js-6"
   }
