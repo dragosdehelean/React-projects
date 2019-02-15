@@ -19,8 +19,7 @@ class App extends Component {
   };
 
   handleChangeScore = (id, modifier) => {
-    // console.log("scorul este: " + score);
-
+  
     this.setState(prevState => ({
       players: prevState.players.map(player => {
         // dc e alt player decat cel cautat, returnez player-ul original
@@ -55,20 +54,8 @@ class App extends Component {
 
   render() {
     const highScore = this.getHighScore();
-
-    /* Loc de joaca */
-    const myPlayers = this.state.players;
-
-    /** AJUTATI-MA SI PE MINE !!! */
-    // vreau sa printez player-ul cu cel mai mare score
-
-    const maxScore = Math.max(...myPlayers.map(player => player.score));
-
-    console.log("cel mai tare player este: ");
-    console.log(myPlayers.find(player => player.score === maxScore ));
-
     return (
-      <div className="scoreboard is-high-score" >
+      <div className="scoreboard" >
         <Header title="Scoreboard" players={this.state.players} />
 
         {/* Players list */}

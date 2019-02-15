@@ -1,22 +1,22 @@
 export const PLAYERS = 
 [
   {
-    name: "Guil",
+    name: "Andrei",
     score: 0,
     id: 0
   },
   {
-    name: "Treasure",
+    name: "Mihai",
     score: 0,
     id: 1
   },
   {
-    name: "Ashley",
+    name: "Laura",
     score: 0,
     id: 2
   },
   {
-    name: "James",
+    name: "Octav",
     score: 0,
     id: 3
   }

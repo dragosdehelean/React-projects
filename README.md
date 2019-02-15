@@ -2,7 +2,7 @@
 ## [Step IT Academy, Bucharest](https://itstep.ro/)
 Trainer: @Dragos Dehelean
 
-**Studenti**:
+**Students**:
 
 * [Costin](https://github.com/costin06/ReactApps)
 * [Andrei](https://github.com/andrein14/React.JS-Projects)
@@ -14,7 +14,7 @@ Trainer: @Dragos Dehelean
 * Alex-Gabi
 * Berkant
 
-**Proiecte finale**
+**Final projects**
 
-* [Planets (simple CDN app - 2 components)](https://dragosdehelean.github.io/React-projects/Modul2.1/aplicatie_4/final/)
-* [Scoreboard App](https://dragosdehelean.github.io/React-Scoreboard-App/)
+* [Planets](https://dragosdehelean.github.io/React-projects/Modul2.1/aplicatie_4/final/): simple CDN app - 2 components
+* [Scoreboard App](https://dragosdehelean.github.io/React-Scoreboard-App/): simple one page app demonstrating various React features: functional and class components, state&props, lifting the state, event handling, controlled components, conditional CSS rendering etc. See the [source code]()
