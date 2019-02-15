@@ -7,8 +7,6 @@ import Icon from './Icon';
 
 // const Player = (props) => {
 
-//   console.log(props.name + " rendered");
-
 //   return (
 //     <div className="player">
 //       <span className="player-name">
@@ -60,9 +58,6 @@ class Player extends React.PureComponent {
           id = {id}
           />
       </div>
-
-
-
 
     );
   }

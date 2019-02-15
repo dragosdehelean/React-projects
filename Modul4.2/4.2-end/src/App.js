@@ -68,7 +68,7 @@ class App extends Component {
             removePlayer={this.handleRemovePlayer}
             changeScore={this.handleChangeScore}
             score={player.score}
-            // is a player's 'score' prop equal to the high score?
+            // is a player's score prop equal to the highest score?
             isHighScore={highScore === player.score}
           />
         ))}

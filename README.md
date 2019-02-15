@@ -10,5 +10,5 @@ Trainer: @Dragos Dehelean
 
 * [Scoreboard App](https://dragosdehelean.github.io/React-Scoreboard-App/) 
 
-> Medium complexity one page app demonstrating various React features: functional and class components, state&props, lifting the state, event handling, controlled components, conditional CSS rendering etc. See the [source code](https://github.com/dragosdehelean/React-projects/tree/master/Modul4.2/4.2-end)
+> Medium complexity one page app demonstrating various React features: functional and class components, state&props, lifting the state, event handling, controlled components, conditional CSS rendering, destructuring props, pure components, usage of prop types etc. See the [source code](https://github.com/dragosdehelean/React-projects/tree/master/Modul4.2/4.2-end)
 
