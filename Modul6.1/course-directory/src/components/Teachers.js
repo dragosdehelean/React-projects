@@ -2,9 +2,6 @@ import React from 'react';
 import TeacherList from '../data/teachers';
 
 const Teachers = ({history}) => {
-  
-  history.push("/new");
-
   let teachers = TeacherList.map((teacher) => {
     return (
       <li className="teacher" key={teacher.id} >
