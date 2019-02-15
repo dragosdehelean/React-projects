@@ -1,5 +1,5 @@
 ## Scoreboard App Project 
 
-Medium complexity one page app demonstrating various React features: functional and class components, state & props, lifting the state, event handling, controlled components, conditional CSS rendering etc.
+Medium complexity one page app demonstrating various React features.
 
 See the [live version](https://dragosdehelean.github.io/React-Scoreboard-App/)
