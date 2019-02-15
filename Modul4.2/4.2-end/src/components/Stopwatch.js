@@ -8,7 +8,7 @@ class Stopwatch extends Component {
   };
 
   componentDidMount(){
-    this.clockId = setInterval(this.tick, 1000);
+    this.clockId = setInterval(this.tick, 100);
   }
 
   componentWillUnmount() {
