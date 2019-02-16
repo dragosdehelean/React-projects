@@ -14,7 +14,7 @@ Trainer: @Dragos Dehelean
 
 * [Courses Directory](https://dragosdehelean.github.io/React-Course-Directory-App/) 
 
-> Medium complexity app demonstrating various features of React Router 4: declaring routes, navigating between routes, nesting routes, URL parameters, 404 error routes, changing routes programmatically, GitHub Pages deployment
+> Medium complexity app demonstrating various features of React Router 4: declaring routes, navigating between routes, nesting routes, URL parameters, 404 error routes, changing routes programmatically, GitHub Pages deployment, etc. See the [source code](https://github.com/dragosdehelean/React-projects/tree/master/Modul6.1/course-directory)
 
 
 
