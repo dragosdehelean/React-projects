@@ -6,7 +6,7 @@ Trainer: @Dragos Dehelean
 
 * [Planets](https://dragosdehelean.github.io/React-projects/Modul2.1/aplicatie_4/final/) 
 
-> Simple CDN app - 2 components
+> Simple CDN app - 2 components. Learning JSX and React Components
 
 * [Scoreboard App](https://dragosdehelean.github.io/React-Scoreboard-App/) 
 
