@@ -17,4 +17,6 @@ Trainer: @Dragos Dehelean
 > Simple website demonstrating various features of React Router 4: declaring routes, nesting routes, redirecting, URL parameters, 404 error routes, changing routes programmatically, GitHub Pages deployment, etc. See the [source code](https://github.com/dragosdehelean/React-projects/tree/master/Modul6.1/course-directory)
 
 
+* [Simple React-Redux Demo](https://dragosdehelean.github.io/React-Redux-Scoreboard-App/)
 
+> Simple one page app demonstrating various Redux concepts: central Redux store, actions, action creators, reducer, subscribe, etc. See the [source code](https://github.com/dragosdehelean/React-Redux-Scoreboard-App)
