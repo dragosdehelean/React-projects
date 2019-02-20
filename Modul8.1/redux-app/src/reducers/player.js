@@ -15,7 +15,7 @@ const initialState = [
   }
 ];
 
-export default function Player(state = initialState, action) {
+export default function PlayerReducer(state = initialState, action) {
   switch (action.type) {
     case PlayerActionTypes.ADD_PLAYER:
       return [...state, { name: action.name, score: 0 }];
@@ -23,7 +23,7 @@ export default function Player(state = initialState, action) {
       return [...state.slice(0, action.index), ...state.slice(action.index + 1)];
     case PlayerActionTypes.UPDATE_PLAYER_SCORE:
       return state.map((player, index) => {
-        return index === action.index ? { ...player, score: player.score + action.score } : player;
+        return index === action.index ? { ...player, score: player.score + action.direction } : player;
       });
     default:
       return state;
