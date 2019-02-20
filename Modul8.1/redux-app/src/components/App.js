@@ -2,24 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Player from './Player';
 import AddPlayerForm from './AddPlayerForm';
-
-
-const INITIAL_STATE = {
-  players: [
-    {
-      name: 'Mihai',
-      score: 31,
-    },
-    {
-      name: 'Alina',
-      score: 20,
-    },
-    {
-      name: 'Carmen',
-      score: 50,
-    },
-  ],
-}
+ 
 
 class App extends Component {
 
