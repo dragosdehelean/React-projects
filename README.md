@@ -19,4 +19,4 @@ Trainer: @Dragos Dehelean
 
 * [Simple React-Redux Demo](https://dragosdehelean.github.io/React-Redux-Scoreboard-App/)
 
-> Simple one page app demonstrating various Redux concepts: central Redux store, actions, action creators, reducer, subscribe, etc. See the [source code](https://github.com/dragosdehelean/React-Redux-Scoreboard-App)
+> Simple one page app. Understanding main Redux concepts: central Redux store, actions, action creators, reducer, subscribe, etc. See the [source code](https://github.com/dragosdehelean/React-Redux-Scoreboard-App)
