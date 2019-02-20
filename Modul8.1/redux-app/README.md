@@ -1,3 +1,3 @@
-##React-Redux Scoreboard App
+## React-Redux Scoreboard App
 
 * [Simple React-Redux Demo](https://dragosdehelean.github.io/React-Redux-Scoreboard-App/)
