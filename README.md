@@ -22,4 +22,4 @@ Trainer: @Dragos Dehelean
 
 * [Redux Scoreboard](https://dragosdehelean.github.io/React-Redux-Scoreboard-App/)
 
-> Another simple one page app with Redux. [source code](https://github.com/dragosdehelean/React-Redux-Scoreboard-App)
+> The Scorboard App wired to Redux. [source code](https://github.com/dragosdehelean/React-Redux-Scoreboard-App)
