@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.results{
+  width: 15%; 
+  margin: auto;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.results li{
+  text-align: left;
+  margin: 5px 0px 5px 15px;
+}
