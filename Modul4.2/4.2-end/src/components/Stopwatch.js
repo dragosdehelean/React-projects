@@ -12,7 +12,7 @@ class Stopwatch extends Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerID);
+    clearInterval(this.clockId);
   }
 
   tick = ()=>{
