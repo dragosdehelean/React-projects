@@ -8,6 +8,10 @@ Trainer: @Dragos Dehelean
 
 > Simple CDN app - 2 components. Learning JSX and React Components
 
+* [React Star Rating](https://dragosdehelean.github.io/React-Star-Rating/) 
+
+> Simple App to practice state and event handling in React
+
 * [Scoreboard App](https://dragosdehelean.github.io/React-Scoreboard-App/) 
 
 > Medium complexity one page app demonstrating various React features: functional and class components, state&props, lifting the state, event handling, controlled components, conditional CSS rendering, lifecycle methods, destructuring props, pure components, usage of prop types etc. See the [source code](https://github.com/dragosdehelean/React-projects/tree/master/Modul4.2/4.2-end)
