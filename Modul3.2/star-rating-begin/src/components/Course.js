@@ -5,7 +5,7 @@ const Course = (props) => {
   return (
     <div className="card">
       <div>
-        <img src={props.url} alt={props.name} />
+        <img src={process.env.PUBLIC_URL + props.url} alt={props.name} />
       </div>
       <h2>{ props.name }</h2>
       <p>{ props.desc }</p>
