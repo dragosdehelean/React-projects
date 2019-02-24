@@ -1,52 +1,140 @@
-import React, { Component } from 'react';
-import GuestList from './Components/GuestList';
+import React, { Component } from "react";
+import GuestList from "./Components/MainContent/GuestList/GuestList";
+import Counter from "./Components/MainContent/Counter";
+import Header from "./Components/Header/Header";
+import ConfirmedFilter from "./Components/MainContent/ConfirmedFilter";
 
 class App extends Component {
-
   state = {
+    isFiltered: false,
+    pendingGuest: "",
     guests: [
-      { name: "Alex", isConfirmed: true},
-      { name: "Bogdan", isConfirmed: false},
-      { name: "Ciprian", isConfirmed: false}
+      { name: "Alex", isConfirmed: true, isEditing: false, id: 1 },
+      { name: "Bogdan", isConfirmed: false, isEditing: false, id: 2 },
+      { name: "Ciprian", isConfirmed: false, isEditing: false, id: 3 }
     ]
-  }
+  };
+
+  /** HEADER METHODS */
+
+  /**
+   * Handles the filtering of confirmed guests
+   */
+  toggleFilter = () => {
+    this.setState(prevState => ({ isFiltered: !prevState.isFiltered }));
+  };
+
+  /**
+   * Handles the Add New Guest input field
+   */
+  handlingNameInput = ev => {
+    this.setState({ pendingGuest: ev.target.value });
+  };
+
+  /**
+   * Handles the adding of a new guest
+   */
+  addGuest = ev => {
+    ev.preventDefault();
+    this.setState(prevState => {
+      const maxId = Math.max(...prevState.guests.map(g => g.id));
+      return {
+        guests: [
+          {
+            name: prevState.pendingGuest,
+            isConfirmed: false,
+            isEditing: false,
+            id: maxId + 1
+          },
+          ...prevState.guests
+        ],
+        pendingGuest: ""
+      };
+    });
+  };
+
+  /** GUEST LIST METHODS */
+
+  /**
+   * Generic method to change any property from a specific guest
+   */
+  toggleGuestPropertyAt = (property, id) => {
+    this.setState(prevState => {
+      return {
+        guests: prevState.guests.map(g =>
+          g.id === id ? { ...g, [property]: !g[property] } : g
+        )
+      };
+    });
+  };
+
+  /**
+   * Handles the click on the "Confirmed" checkbox
+   */
+  onConfirmToggle = id => {
+    this.toggleGuestPropertyAt("isConfirmed", id);
+  };
+
+  /**
+   * Controls the edited text from the guest name's field
+   */
+  setNameAt = (text, id) => {
+    this.setState(prevState => ({
+      guests: prevState.guests.map(g => g.id === id ? { ...g, name: text } : g )
+    }));
+  };
+
+  /**
+   * Handles the "Edit/Save" action
+   */
+  onEditToggle = id => {
+    this.toggleGuestPropertyAt("isEditing", id);
+  };
+
+  removeGuestAt = id => {
+    this.setState(prevState => ({
+      guests: prevState.guests.filter(g => g.id !== id)
+    }));
+  };
+
+  /** COUNTER METHODS */
+
+  getTotalInvited = () => this.state.guests.length;
+
+  getTotalConfirmed = () =>
+    this.state.guests.filter(guest => guest.isConfirmed).length;
 
   render() {
+    const attending = this.getTotalConfirmed();
+    const totalGuests = this.getTotalInvited();
+
     return (
       <div className="App">
-        <header>
-          <h1>RSVP App</h1>         
-          <form>
-              <input type="text" value="Safia" placeholder="Invite Someone" />
-              <button type="submit" name="submit" value="submit">Submit</button>
-          </form>
-        </header>
+        <Header
+          addGuest={this.addGuest}
+          pendingGuest={this.state.pendingGuest}
+          handlingNameInput={this.handlingNameInput}
+        />
         <div className="main">
-          <div>
-            <h2>Invitees</h2>
-            <label>
-              <input type="checkbox" /> Hide those who haven't responded
-            </label>
-          </div>
-          <table className="counter">
-            <tbody>
-              <tr>
-                <td>Attending:</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>Unconfirmed:</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td>Total:</td>
-                <td>3</td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <GuestList guests={this.state.guests}/>
+          <ConfirmedFilter
+            toggleFilter={this.toggleFilter}
+            isFiltered={this.state.isFiltered}
+          />
+          <Counter
+            attending={attending}
+            unconfirmed={totalGuests - attending}
+            total={totalGuests}
+          />
 
+          <GuestList
+            guests={this.state.guests}
+            onConfirm={this.onConfirmToggle}
+            onEditToggle={this.onEditToggle}
+            setNameAt={this.setNameAt}
+            isFiltered={this.state.isFiltered}
+            removeGuestAt={this.removeGuestAt}
+            pendingGuestName={this.state.pendingGuest}
+          />
         </div>
       </div>
     );
