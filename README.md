@@ -16,8 +16,8 @@ Trainer: @Dragos Dehelean
 
 > **Medium complexity** one page app demonstrating various **React features**: functional and class components, state&props, lifting the state, event handling, controlled components, conditional CSS rendering, lifecycle methods, destructuring props, pure components etc. See the [source code](https://github.com/dragosdehelean/React-projects/tree/master/Modul4.2/4.2-end)
 
-* [RSVP App]()
-> **Advanced UI** one page app. Exploring **best practices**: controlled components, complex call-backs, changing state asychronously, destructuring props, using Prop Types, etc. See the [source code]()
+* [RSVP App](https://dragosdehelean.github.io/React-RSVP-App/)
+> **Advanced UI** one page app. Exploring **best practices**: controlled components, complex call-backs, changing state asychronously, destructuring props, using Prop Types, etc. See the [source code](https://github.com/dragosdehelean/React-RSVP-App.git)
 
 * [Courses Directory](https://dragosdehelean.github.io/React-Course-Directory-App/) 
 
